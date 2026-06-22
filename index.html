@@ -17,21 +17,19 @@
 html,body{margin:0;padding:0}
 body{
   font-family:'Heebo',sans-serif;background:var(--bg);color:var(--txt);
-  line-height:1.55;font-size:16px;padding-bottom:90px;
+  line-height:1.55;font-size:16px;padding-bottom:96px;
   background-image:radial-gradient(1200px 600px at 80% -10%,rgba(77,142,255,.14),transparent 60%),radial-gradient(900px 500px at -10% 10%,rgba(242,193,78,.07),transparent 55%);
 }
 .wrap{max-width:760px;margin:0 auto;padding:0 16px}
-header{
-  padding:26px 16px 20px;text-align:center;
-  background:linear-gradient(180deg,rgba(14,26,56,.9),transparent);
-}
+header{padding:26px 16px 16px;text-align:center;background:linear-gradient(180deg,rgba(14,26,56,.9),transparent)}
 .brand{font-family:'Outfit',sans-serif;font-weight:800;letter-spacing:.5px;font-size:15px;color:var(--accent);margin-bottom:6px}
 .brand b{color:var(--gold)}
 h1{font-size:26px;margin:6px 0 4px;font-weight:800}
 .sub{color:var(--muted);font-size:14px;margin:0}
+.save-note{max-width:760px;margin:10px auto 0;background:rgba(123,224,160,.1);border:1px solid rgba(123,224,160,.35);border-radius:12px;padding:9px 14px;font-size:13px;color:#Bfe9cf;text-align:center}
 .pitch{
-  max-width:760px;margin:14px auto 8px;background:linear-gradient(135deg,rgba(77,142,255,.12),rgba(255,111,76,.08));
-  border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14.5px;color:#DCE6FF
+  max-width:760px;margin:12px auto 8px;background:linear-gradient(135deg,rgba(77,142,255,.12),rgba(255,111,76,.08));
+  border:1px solid var(--line);border-radius:14px;padding:13px 16px;font-size:14.5px;color:#DCE6FF
 }
 .pitch b{color:var(--gold)}
 section{
@@ -39,42 +37,36 @@ section{
   padding:16px 16px 8px;margin:14px 0;box-shadow:0 6px 24px rgba(0,0,0,.25)
 }
 .sec-h{display:flex;align-items:center;gap:10px;margin:0 0 12px}
-.num{
-  flex:0 0 32px;height:32px;border-radius:9px;display:grid;place-items:center;
-  background:linear-gradient(135deg,var(--accent),#2E6BE0);color:#fff;font-weight:800;font-size:15px
-}
+.num{flex:0 0 32px;height:32px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),#2E6BE0);color:#fff;font-weight:800;font-size:15px}
 .sec-h h2{font-size:18px;margin:0;font-weight:700}
+.sec-h .opt{font-size:12px;color:var(--muted);font-weight:400}
 .q{margin:0 0 12px}
 .q label{display:block;font-size:14.5px;font-weight:500;color:#E6EEFF;margin-bottom:5px}
 .q .hint{color:var(--muted);font-weight:400;font-size:12.5px}
 textarea{
   width:100%;background:var(--card2);border:1px solid var(--line);border-radius:10px;
   color:var(--txt);font-family:'Heebo',sans-serif;font-size:15px;padding:9px 11px;resize:vertical;
-  min-height:42px;line-height:1.4;transition:border .15s
+  min-height:44px;line-height:1.4;transition:border .15s
 }
 textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(77,142,255,.15)}
 .tip{font-size:13px;color:var(--gold);background:rgba(242,193,78,.08);border:1px solid rgba(242,193,78,.25);border-radius:10px;padding:9px 12px;margin:2px 0 12px}
-/* internal toggle */
-.internal-btn{
-  display:block;width:100%;margin:18px 0 0;background:transparent;border:1px dashed var(--line);
-  color:var(--muted);border-radius:12px;padding:12px;font-family:'Heebo';font-size:14px;cursor:pointer
-}
+.tip.law{color:#FFB199;background:rgba(255,111,76,.08);border-color:rgba(255,111,76,.3)}
+.internal-btn{display:block;width:100%;margin:18px 0 0;background:transparent;border:1px dashed var(--line);
+  color:var(--muted);border-radius:12px;padding:12px;font-family:'Heebo';font-size:14px;cursor:pointer}
 .internal{display:none;background:#140d1f;border:1px solid #3a2a55;border-radius:14px;padding:14px 16px;margin-top:10px}
 .internal.show{display:block}
 .internal h3{margin:0 0 8px;color:var(--cta);font-size:15px}
 .internal p{margin:4px 0;font-size:14px;color:#E8DCFF}
 .internal .warn{color:#FFB199;font-size:12.5px;font-weight:700}
 .anchor-row{background:rgba(255,111,76,.1);border:1px solid rgba(255,111,76,.3);border-radius:10px;padding:8px 12px;margin:6px 0;font-size:14px}
-/* sticky bar */
-.bar{
-  position:fixed;left:0;right:0;bottom:0;background:rgba(8,15,33,.96);backdrop-filter:blur(8px);
-  border-top:1px solid var(--line);padding:10px 14px;display:flex;gap:8px;align-items:center;justify-content:space-between;z-index:50
-}
-.bar .s{font-size:12.5px;color:var(--muted)}
-.bar button{
-  background:linear-gradient(135deg,var(--accent),#2E6BE0);color:#fff;border:none;border-radius:10px;
-  padding:9px 14px;font-family:'Heebo';font-weight:700;font-size:13.5px;cursor:pointer
-}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(8,15,33,.96);backdrop-filter:blur(8px);
+  border-top:1px solid var(--line);padding:9px 12px;display:flex;gap:7px;align-items:center;justify-content:space-between;z-index:50}
+.bar .s{font-size:12px;color:var(--muted);flex:1;min-width:0}
+.bar .btns{display:flex;gap:7px}
+.bar button{background:linear-gradient(135deg,var(--accent),#2E6BE0);color:#fff;border:none;border-radius:10px;
+  padding:9px 12px;font-family:'Heebo';font-weight:700;font-size:13px;cursor:pointer;white-space:nowrap}
+.bar button.gold{background:linear-gradient(135deg,var(--gold),#d9a93b);color:#1a1300}
 .bar button.ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}
 .saved{color:#7BE0A0;font-size:12px}
 footer{text-align:center;color:var(--muted);font-size:12px;padding:18px 16px 8px}
@@ -88,123 +80,126 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:18px 16px 8px
 </header>
 
 <div class="wrap">
+  <div class="save-note">💾 כל מה שתמלא נשמר אוטומטית במכשיר ולא נמחק — גם אחרי סגירת הדפדפן או הפגישה. לקובץ קבוע: כפתור "הורד קובץ" למטה.</div>
+
   <div class="pitch">
     מוכרים את <b>השעות שיחזרו אליך</b> ואת <b>ההזמנות שלא תפספס</b> — לא "בוט".
-    קודם מקשיבים לכאב, משקפים, ואז מציעים. כל שאלה כאן ממפה ישירות לרכיב במערכת.
+    קודם מקשיבים לכאב, משקפים, ואז מציעים.
   </div>
 
   <section>
     <div class="sec-h"><div class="num">1</div><h2>תמונת מצב (ROI)</h2></div>
-    <div class="q"><label>כמה נכסים היום? צפי הרחבה?</label><textarea data-k="q1"></textarea></div>
-    <div class="q"><label>פניות בחודש — רגיל / פיק?</label><textarea data-k="q2"></textarea></div>
-    <div class="q"><label>ערוצים וחלוקה <span class="hint">(WhatsApp / Airbnb / Booking / טלפון / מייל)</span></label><textarea data-k="q3"></textarea></div>
-    <div class="q"><label>כמה זמן ביום על מענה חוזר?</label><textarea data-k="q4"></textarea></div>
-    <div class="q"><label>% פניות לא רלוונטיות?</label><textarea data-k="q5"></textarea></div>
-    <div class="q"><label>איבדת הזמנה כי לא ענית בזמן? כמה?</label><textarea data-k="q6"></textarea></div>
+    <div class="q"><label>אודי, כמה נכסים אתה מתפעל היום, וכמה פניות בחודש?</label><textarea data-k="q1"></textarea></div>
+    <div class="q"><label>מתוכם כמה לא רלוונטיים, ואיפה אתה מאבד הכי הרבה זמן?</label><textarea data-k="q2"></textarea></div>
+    <div class="q"><label>קרה שאיבדת הזמנה כי לא ענית מספיק מהר?</label><textarea data-k="q3"></textarea></div>
   </section>
 
   <section>
     <div class="sec-h"><div class="num">2</div><h2>זמינות (הציר הקריטי)</h2></div>
-    <div class="q"><label>איך מנהל יומן לכל הנכסים? <span class="hint">(Airbnb / Booking / יומן / אקסל / ראש)</span></label><textarea data-k="q7"></textarea></div>
-    <div class="q"><label>channel manager? איזה?</label><textarea data-k="q8"></textarea></div>
-    <div class="q"><label>יכול לשלוף קישור iCal לכל נכס? <span class="hint">(כן ברוב המקרים)</span></label><textarea data-k="q9"></textarea></div>
-    <div class="q"><label>מי מעדכן זמינות + תדירות?</label><textarea data-k="q10"></textarea></div>
-    <div class="q"><label>איפה נכנסות ההזמנות הישירות מוואטסאפ?</label><textarea data-k="q11"></textarea></div>
+    <div class="q"><label>איך אתה מנהל יומן וזמינות ל-6 הוילות היום? <span class="hint">(Airbnb / Booking / יומן / אקסל / ראש)</span></label><textarea data-k="q4"></textarea></div>
+    <div class="q"><label>יש לך channel manager שמסנכרן ביניהם? ואם לא — אתה יכול לשלוף קישור iCal מ-Airbnb/Booking לכל וילה?</label><textarea data-k="q5"></textarea></div>
     <div class="tip">💡 אין channel manager → iCal parser הוא ה-fallback האוניברסלי = אפס double-booking.</div>
   </section>
 
   <section>
-    <div class="sec-h"><div class="num">3</div><h2>בסיס ידע <span class="hint" style="font-size:13px">(6 וילות כבר מילאתי — לאשר)</span></h2></div>
-    <div class="q"><label>מחירים אמיתיים לכל וילה לפי עונה <span class="hint">(רגיל/קיץ/חג)</span></label><textarea data-k="q12"></textarea></div>
-    <div class="q"><label>מקדמה (% / סכום)?</label><textarea data-k="q13"></textarea></div>
-    <div class="q"><label>מדיניות ביטול אמיתית?</label><textarea data-k="q14"></textarea></div>
-    <div class="q"><label>וילות נוספות שלא ברשת? שמות?</label><textarea data-k="q15"></textarea></div>
-    <div class="q"><label>עלויות תוספות <span class="hint">(late checkout / ארוחות / עיסויים)</span></label><textarea data-k="q16"></textarea></div>
+    <div class="sec-h"><div class="num">3</div><h2>בסיס ידע <span class="opt">(6 וילות כבר מילאתי — לאשר)</span></h2></div>
+    <div class="q"><label>אישור/תיקון לכל וילה — מחירים לפי עונה, מקדמה, ומדיניות ביטול אמיתית <span class="hint">(טופז · אור · יותם · רוני · דניאלה · פאן)</span></label><textarea data-k="q6"></textarea></div>
+    <div class="q"><label>יש עוד וילות שלא מצאתי ברשת?</label><textarea data-k="q7"></textarea></div>
   </section>
 
   <section>
-    <div class="sec-h"><div class="num">4</div><h2>סינון <span class="hint" style="font-size:13px">(התנהגות, לא גיל)</span></h2></div>
-    <div class="q"><label>הלקוח האידיאלי?</label><textarea data-k="q17"></textarea></div>
-    <div class="q"><label>מי *לא* מתאים — בהתנהגות? <span class="hint">(אירועים/רעש/הגברה/חריגת תפוסה)</span></label><textarea data-k="q18"></textarea></div>
-    <div class="q"><label>מקרים בעייתיים בעבר? המשותף?</label><textarea data-k="q19"></textarea></div>
-    <div class="q"><label>כללי בית בלי פשרה?</label><textarea data-k="q20"></textarea></div>
-    <div class="q"><label>מקרה גבול — מתי להעביר אליך במקום לדחות?</label><textarea data-k="q21"></textarea></div>
-    <div class="tip">🔴 סינון לפי אופי שהייה וכללי בית — לא גיל. יעיל + תואם חוק איסור הפליה. ניסוח סופי מול עו"ד.</div>
+    <div class="sec-h"><div class="num">4</div><h2>סינון <span class="opt">(קריטי + רגיש)</span></h2></div>
+    <div class="q"><label>מי הלקוח האידיאלי, ומי בדיוק לא מתאים?</label><textarea data-k="q8"></textarea></div>
+    <div class="tip law">🔴 נסנן לפי התנהגות וכללי בית (אירועים / הגברה / חריגת תפוסה) — לא לפי גיל. ככה זה גם יעיל וגם תואם את חוק איסור הפליה. (אנחנו מספקים את הכלי, ניסוח סופי מול עו"ד.)</div>
+    <div class="q"><label>מתי תרצה שהמערכת תעביר אליך לבדיקה ידנית במקום לדחות?</label><textarea data-k="q9"></textarea></div>
   </section>
 
   <section>
     <div class="sec-h"><div class="num">5</div><h2>שפה · טון · סוף שיחה</h2></div>
-    <div class="q"><label>שפות? <span class="hint">(עברית / רוסית / אנגלית)</span></label><textarea data-k="q22"></textarea></div>
-    <div class="q"><label>טון מותג? <span class="hint">(חם-משפחתי / יוקרתי / ענייני)</span></label><textarea data-k="q23"></textarea></div>
-    <div class="q"><label>נוסחים קיימים לשמר?</label><textarea data-k="q24"></textarea></div>
-    <div class="q"><label>סוף שיחה מוצלחת = מה? <span class="hint">(סיכום אליך / שריון / לינק / טלפון)</span></label><textarea data-k="q25"></textarea></div>
+    <div class="q"><label>באילו שפות מגיעות פניות, ואיזה טון מתאים למותג? <span class="hint">(חם-משפחתי / יוקרתי / ענייני)</span></label><textarea data-k="q10"></textarea></div>
+    <div class="q"><label>מה אתה רוצה שיקרה בסוף שיחה מוצלחת? <span class="hint">(סיכום אליך / שריון / לינק / שיחת טלפון)</span></label><textarea data-k="q11"></textarea></div>
   </section>
 
   <section>
-    <div class="sec-h"><div class="num">6</div><h2>תשלומים <span class="hint" style="font-size:13px">(רק אם Premium)</span></h2></div>
-    <div class="q"><label>איך גובה היום? סליקה?</label><textarea data-k="q26"></textarea></div>
-    <div class="q"><label>רוצה לינק תשלום / שריון אוטומטי?</label><textarea data-k="q27"></textarea></div>
+    <div class="sec-h"><div class="num">6</div><h2>תשלומים <span class="opt">(רק אם Premium)</span></h2></div>
+    <div class="q"><label>תרצה שהבוט ישלח לינק תשלום / שריון אוטומטי, או שתעדיף לסגור ידנית בשלב ראשון?</label><textarea data-k="q12"></textarea></div>
   </section>
 
   <section>
     <div class="sec-h"><div class="num">7</div><h2>סגירה</h2></div>
-    <div class="q"><label>חבילה? <span class="hint">(Basic / Pro / Premium)</span></label><textarea data-k="q28"></textarea></div>
-    <div class="q"><label>מסלול? <span class="hint">(חד-פעמי / setup+חודשי)</span></label><textarea data-k="q29"></textarea></div>
-    <div class="q"><label>מתי באוויר?</label><textarea data-k="q30"></textarea></div>
-    <div class="q"><label>מספר WhatsApp עסקי + בעלים <span class="hint">(לאימות BSP)</span></label><textarea data-k="q31"></textarea></div>
+    <div class="q"><label>איזו חבילה מדברת אליו? <span class="hint">(Basic / Pro / Premium)</span> ומתי תרצה שזה יהיה באוויר?</label><textarea data-k="q13"></textarea></div>
+    <div class="q"><label>מספר WhatsApp עסקי + בעלים <span class="hint">(לאימות BSP)</span></label><textarea data-k="q14"></textarea></div>
   </section>
 
   <button class="internal-btn" id="intBtn">▸ הערות פנימיות + עוגן מחיר (לא להראות ללקוח)</button>
   <div class="internal" id="intBox">
-    <h3>עוגן מחיר</h3>
+    <h3>עוגן מחיר (מודל setup + ריטיינר)</h3>
     <div class="anchor-row"><b>Pro מומלץ:</b> setup ~₪5,000 + ₪900/חודש</div>
     <div class="anchor-row"><b>חבר/לקוח ראשון:</b> setup ₪2,500 + ₪600/חודש — תמורת המלצה + case study</div>
-    <p class="warn">⚠️ אל תציג את הפאנל הזה לאודי. סגור אותו לפני שמראים את הכרטיס.</p>
+    <p class="warn">⚠️ סגור את הפאנל הזה לפני שמראים את הכרטיס לאודי.</p>
     <h3 style="margin-top:12px">למלא במערכת אחרי השיחה</h3>
     <p>☐ מחירים/מקדמה/ביטול → knowledge.md</p>
     <p>☐ וילות נוספות</p>
-    <p>☐ הכרעת זמינות (iCal / API / Calendar)</p>
+    <p>☐ הכרעת זמינות (iCal / channel manager / Calendar)</p>
     <p>☐ נוסחי סינון + מקרי גבול</p>
-    <p>☐ חבילה + מחיר → proposal.html</p>
+    <p>☐ חבילה + מחיר → הצעה</p>
   </div>
 
-  <footer>simplifAI · הכלי בלבד, לא ייעוץ משפטי · תשובות נשמרות אוטומטית במכשיר זה</footer>
+  <footer>simplifAI · הכלי בלבד, לא ייעוץ משפטי · התשובות נשמרות אוטומטית במכשיר זה</footer>
 </div>
 
 <div class="bar">
-  <span class="s" id="status">נשמר אוטומטית במכשיר</span>
-  <div style="display:flex;gap:8px">
+  <span class="s" id="status">💾 נשמר אוטומטית במכשיר</span>
+  <div class="btns">
     <button class="ghost" id="clearBtn">נקה</button>
-    <button id="copyBtn">העתק סיכום</button>
+    <button id="copyBtn">העתק</button>
+    <button class="gold" id="dlBtn">הורד קובץ</button>
   </div>
 </div>
 
 <script>
-const KEY='topaz_discovery_v1';
+const KEY='topaz_discovery_v2';
 const areas=[...document.querySelectorAll('textarea')];
 const status=document.getElementById('status');
-// load
+function flash(msg){status.innerHTML='<span class="saved">'+msg+'</span>';clearTimeout(flash._t);flash._t=setTimeout(()=>status.textContent='💾 נשמר אוטומטית במכשיר',1600);}
+// load saved
 try{const d=JSON.parse(localStorage.getItem(KEY)||'{}');areas.forEach(a=>{if(d[a.dataset.k])a.value=d[a.dataset.k]});}catch(e){}
-let t;
 function save(){
   const d={};areas.forEach(a=>{if(a.value.trim())d[a.dataset.k]=a.value});
-  localStorage.setItem(KEY,JSON.stringify(d));
-  status.innerHTML='<span class="saved">✓ נשמר</span>';
-  clearTimeout(t);t=setTimeout(()=>status.textContent='נשמר אוטומטית במכשיר',1200);
+  try{localStorage.setItem(KEY,JSON.stringify(d));flash('✓ נשמר');}catch(e){status.textContent='⚠️ שגיאת שמירה — השתמש ב"הורד קובץ"';}
 }
-areas.forEach(a=>{a.addEventListener('input',save);a.addEventListener('change',save);
-  a.style.height='auto';a.addEventListener('input',function(){this.style.height='auto';this.style.height=this.scrollHeight+'px'});});
-// autosize on load
-areas.forEach(a=>{if(a.value){a.style.height='auto';a.style.height=a.scrollHeight+'px'}});
-document.getElementById('clearBtn').onclick=()=>{if(confirm('למחוק את כל התשובות?')){localStorage.removeItem(KEY);areas.forEach(a=>{a.value='';a.style.height='42px'});status.textContent='נוקה'}};
-document.getElementById('copyBtn').onclick=()=>{
-  const labels=[...document.querySelectorAll('.q')];
-  let out='אפיון נופש טופז\\n\\n';
-  labels.forEach(q=>{const l=q.querySelector('label').innerText.trim();const v=q.querySelector('textarea').value.trim();if(v)out+='• '+l+'\\n  '+v+'\\n\\n';});
-  navigator.clipboard.writeText(out).then(()=>{status.innerHTML='<span class="saved">✓ הועתק לסיכום</span>';setTimeout(()=>status.textContent='נשמר אוטומטית במכשיר',1500)});
+function autosize(a){a.style.height='auto';a.style.height=a.scrollHeight+'px';}
+areas.forEach(a=>{a.addEventListener('input',()=>{autosize(a);save();});a.addEventListener('change',save);if(a.value)autosize(a);});
+// build a plain-text summary of filled answers
+function buildSummary(){
+  const qs=[...document.querySelectorAll('.q')];
+  let out='אפיון נופש טופז — '+new Date().toLocaleString('he-IL')+'\n\n';
+  let any=false;
+  qs.forEach(q=>{const l=q.querySelector('label').innerText.trim();const v=q.querySelector('textarea').value.trim();if(v){any=true;out+='• '+l+'\n  '+v+'\n\n';}});
+  return any?out:'';
+}
+document.getElementById('copyBtn').onclick=async()=>{
+  const out=buildSummary();
+  if(!out){flash('אין מה להעתיק עדיין');return;}
+  try{await navigator.clipboard.writeText(out);flash('✓ הועתק');}
+  catch(e){ // fallback למכשירים שחוסמים clipboard
+    const ta=document.createElement('textarea');ta.value=out;document.body.appendChild(ta);ta.select();
+    try{document.execCommand('copy');flash('✓ הועתק');}catch(_){flash('השתמש ב"הורד קובץ"');}
+    document.body.removeChild(ta);
+  }
 };
+document.getElementById('dlBtn').onclick=()=>{
+  const out=buildSummary()||('אפיון נופש טופז — '+new Date().toLocaleString('he-IL')+'\n(טרם מולאו תשובות)');
+  const blob=new Blob([out],{type:'text/plain;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='אפיון-נופש-טופז.txt';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+  flash('✓ הקובץ הורד');
+};
+document.getElementById('clearBtn').onclick=()=>{if(confirm('למחוק את כל התשובות מהמכשיר?')){localStorage.removeItem(KEY);areas.forEach(a=>{a.value='';a.style.height='44px';});status.textContent='נוקה';}};
 const ib=document.getElementById('intBtn'),box=document.getElementById('intBox');
-ib.onclick=()=>{box.classList.toggle('show');ib.textContent=box.classList.contains('show')?'▾ הסתר הערות פנימיות':'▸ הערות פנימיות + עוגן מחיר (לא להראות ללקוח)'};
+ib.onclick=()=>{box.classList.toggle('show');ib.textContent=box.classList.contains('show')?'▾ הסתר הערות פנימיות':'▸ הערות פנימיות + עוגן מחיר (לא להראות ללקוח)';};
 </script>
 </body>
 </html>
